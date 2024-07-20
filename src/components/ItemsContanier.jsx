@@ -1,8 +1,10 @@
-export const ItemsContanier = ({ ArrayList }) => {
+import { Para } from "./Para";
+
+export const ItemsContanier = ({ ArrayList, remove }) => {
   return (
     <div>
       {ArrayList.map((t) => (
-        <p>{t}</p>
+        <Para task={t} removefromlist={remove} />
       ))}
     </div>
   );
